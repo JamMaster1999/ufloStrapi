@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_class_schedule_schedules",
+  "info": {
+    "name": "Event",
+    "icon": "calendar-times"
+  },
+  "options": {},
+  "attributes": {
+    "Hosts": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "MeetingLocation": {
+      "type": "string"
+    },
+    "StartTime": {
+      "type": "time"
+    },
+    "EndTime": {
+      "type": "time"
+    },
+    "MeetingType": {
+      "type": "enumeration",
+      "enum": [
+        "Lecture",
+        "OfficeHour",
+        "ReviewSession",
+        "Exam"
+      ]
+    },
+    "week_days": {
+      "collection": "week-days"
+    },
+    "EventFiles": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_content_number_inputs",
+  "info": {
+    "name": "NumberInput",
+    "icon": "sort-numeric-down"
+  },
+  "options": {},
+  "attributes": {
+    "CorrectAnswer": {
+      "type": "decimal"
+    },
+    "Explanation": {
+      "type": "richtext"
+    }
+  }
+}

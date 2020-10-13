@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lessons",
+  "info": {
+    "name": "Lessons"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "LessonName": {
+      "type": "string"
+    },
+    "visibility": {
+      "type": "boolean"
+    },
+    "VisibilityTime": {
+      "type": "datetime"
+    },
+    "learning_objectives": {
+      "via": "lesson",
+      "collection": "learning-objectives"
+    },
+    "chapters": {
+      "via": "lessons",
+      "collection": "chapters"
+    }
+  }
+}

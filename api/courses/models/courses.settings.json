@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "name": "Courses"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "courseName": {
+      "type": "string"
+    },
+    "StartDate": {
+      "type": "date"
+    },
+    "EndDate": {
+      "type": "date"
+    },
+    "users": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "courses",
+      "dominant": true
+    },
+    "courseSlug": {
+      "type": "uid",
+      "targetField": "courseName"
+    },
+    "Syllabus": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Event": {
+      "type": "component",
+      "repeatable": true,
+      "component": "class-schedule.schedule"
+    },
+    "chapters": {
+      "collection": "chapters",
+      "via": "course"
+    }
+  }
+}

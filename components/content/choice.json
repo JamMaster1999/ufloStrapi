@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_content_choices",
+  "info": {
+    "name": "Choice",
+    "icon": "check-circle"
+  },
+  "options": {},
+  "attributes": {
+    "ChoiceDesc": {
+      "type": "text"
+    },
+    "ChoiceOrder": {
+      "type": "integer"
+    },
+    "Correct": {
+      "type": "boolean"
+    }
+  }
+}

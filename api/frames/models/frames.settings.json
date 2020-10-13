@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "frames",
+  "info": {
+    "name": "Frames"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "FrameName": {
+      "type": "string"
+    },
+    "FrameDesc": {
+      "type": "richtext"
+    },
+    "Order": {
+      "type": "integer"
+    },
+    "learning_objective": {
+      "model": "learning-objectives",
+      "via": "frames"
+    },
+    "FrameSlug": {
+      "type": "uid",
+      "targetField": "FrameName"
+    },
+    "FrameDynamicZone": {
+      "type": "dynamiczone",
+      "components": [
+        "content.formula-box",
+        "content.number-input",
+        "content.multiple-choice"
+      ]
+    },
+    "Questionboolean": {
+      "type": "boolean"
+    },
+    "TestHamed": {
+      "type": "dynamiczone",
+      "components": []
+    }
+  }
+}

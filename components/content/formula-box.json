@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_content_formula_boxes",
+  "info": {
+    "name": "FormulaBox",
+    "icon": "equals"
+  },
+  "options": {},
+  "attributes": {
+    "FormulaRichText": {
+      "type": "richtext"
+    }
+  }
+}

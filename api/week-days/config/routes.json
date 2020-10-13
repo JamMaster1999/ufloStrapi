@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/week-days",
+      "handler": "week-days.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/week-days/count",
+      "handler": "week-days.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/week-days/:id",
+      "handler": "week-days.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/week-days",
+      "handler": "week-days.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/week-days/:id",
+      "handler": "week-days.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/week-days/:id",
+      "handler": "week-days.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

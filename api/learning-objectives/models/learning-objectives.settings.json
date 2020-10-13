@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learning_objectives",
+  "info": {
+    "name": "LearningObjectives"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "lesson": {
+      "model": "lessons",
+      "via": "learning_objectives"
+    },
+    "frames": {
+      "via": "learning_objective",
+      "collection": "frames"
+    }
+  }
+}

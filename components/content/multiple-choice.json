@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_content_multiple_choices",
+  "info": {
+    "name": "MultipleChoice",
+    "icon": "question-circle"
+  },
+  "options": {},
+  "attributes": {
+    "EachChoice": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.choice"
+    },
+    "Explanation": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "q_performances",
+  "info": {
+    "name": "QPerformance"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "QuestionName": {
+      "type": "string"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "question_answers"
+    },
+    "frame": {
+      "model": "frames"
+    }
+  }
+}

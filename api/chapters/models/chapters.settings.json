@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chapters",
+  "info": {
+    "name": "Chapters"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "course": {
+      "via": "chapters",
+      "model": "courses"
+    },
+    "Order": {
+      "type": "integer"
+    },
+    "Visibility": {
+      "type": "boolean"
+    },
+    "VisibleTime": {
+      "type": "datetime"
+    },
+    "lessons": {
+      "collection": "lessons",
+      "via": "chapters",
+      "dominant": true
+    }
+  }
+}

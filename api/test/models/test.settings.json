@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tests",
+  "info": {
+    "name": "Test"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "field1": {
+      "type": "string"
+    },
+    "password": {
+      "type": "password"
+    },
+    "pwd": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "username": {
+      "type": "string"
+    }
+  }
+}
