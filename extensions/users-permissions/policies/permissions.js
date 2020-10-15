@@ -10,33 +10,33 @@ module.exports = async (ctx, next) => {
 
   // add the detection of `token` query parameter
   if (
-    (ctx.request && ctx.request.header && ctx.request.header.authorization) ||
-    (ctx.request.query && ctx.request.query.token)
+    (ctx.request && ctx.request.header && ctx.request.header.authorization) || (ctx.request.query && ctx.request.query.token)
     ) {
     try {
       // init `id` and `isAdmin` outside of validation blocks
       let id;
       let isAdmin;
 
-      if (ctx.request.query && ctx.request.query.token) {
-        // find the token entry that match the token from the request
-        const [token] = await strapi.query('token').find({token: ctx.request.query.token});
+        if (ctx.request.query && ctx.request.query.token) {
+            // find the token entry that match the token from the request
+            // the [token] {} deconstrucuts the query and select the first item in the array
+            const [token] = await strapi.query('token').find({token: ctx.request.query.token});
 
-        if (!token) {
-          throw new Error(`Invalid token: This token doesn't exist`);
-        } else {
-          if (token.user && typeof token.token === 'string') {
-            id = token.user.id;
-          }
-          isAdmin = false;
-        }
-        delete ctx.request.query.token;
-    } else if (ctx.request && ctx.request.header && ctx.request.header.authorization) {
+            if (!token) {
+                throw new Error(`Invalid token: This token doesn't exist`);
+            } else {
+            if (token.user && typeof token.token === 'string') {
+                id = token.user.id;
+            }
+            isAdmin = false;
+            }
+            delete ctx.request.query.token;
+        } else if (ctx.request && ctx.request.header && ctx.request.header.authorization) {
       // use the current system with JWT in the header
       const decrypted = await strapi.plugins[
         'users-permissions'
       ].services.jwt.getToken(ctx);
-
+    //{id} = decrypted 
       id = decrypted.id;
       isAdmin = decrypted.isAdmin || false;
     }
@@ -48,9 +48,7 @@ module.exports = async (ctx, next) => {
       }
 
       // fetch authenticated user
-      ctx.state.user = await strapi.plugins[
-        'users-permissions'
-      ].services.user.fetchAuthenticatedUser(id);
+      ctx.state.user = await strapi.plugins[ 'users-permissions'].services.user.fetchAuthenticatedUser(id);
     } catch (err) {
       return handleErrors(ctx, err, 'unauthorized');
     }
