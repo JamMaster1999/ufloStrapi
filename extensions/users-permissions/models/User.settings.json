@@ -60,6 +60,10 @@
     "question_answers": {
       "via": "user",
       "collection": "q-performance"
+    },
+    "token_aut": {
+      "via": "user_ref",
+      "model": "token"
     }
   }
 }
