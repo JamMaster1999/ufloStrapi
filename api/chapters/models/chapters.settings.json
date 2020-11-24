@@ -2,16 +2,18 @@
   "kind": "collectionType",
   "collectionName": "chapters",
   "info": {
-    "name": "Chapters"
+    "name": "Chapters",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": true
   },
   "attributes": {
     "course": {
-      "via": "chapters",
-      "model": "courses"
+      "model": "courses",
+      "via": "chapters"
     },
     "Order": {
       "type": "integer"

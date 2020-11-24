@@ -45,8 +45,8 @@
       "component": "class-schedule.schedule"
     },
     "chapters": {
-      "collection": "chapters",
-      "via": "course"
+      "via": "course",
+      "collection": "chapters"
     }
   }
 }

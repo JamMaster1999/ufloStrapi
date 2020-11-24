@@ -4,7 +4,7 @@ module.exports = ({ env }) => ({
   url: env('', 'https://glacial-river-01756.herokuapp.com'),
   admin: {
     auth: {
-      secret: env('ADMIN_JWT_SECRET', '99e8d6d356cac021401f5a2886357a83')
+      secret: env('ADMIN_JWT_SECRET')
     },
   },
 });
