@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learning_types",
+  "info": {
+    "name": "LearningType"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "learningType": {
+      "type": "string"
+    }
+  }
+}

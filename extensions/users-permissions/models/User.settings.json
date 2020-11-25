@@ -6,7 +6,8 @@
     "description": ""
   },
   "options": {
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "username": {
@@ -54,16 +55,88 @@
       "configurable": false
     },
     "courses": {
-      "via": "users",
-      "collection": "courses"
+      "collection": "courses",
+      "via": "users"
     },
     "question_answers": {
-      "via": "user",
-      "collection": "q-performance"
+      "collection": "q-performance",
+      "via": "user"
     },
-    "token_aut": {
-      "via": "user_ref",
-      "model": "token"
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "university": {
+      "model": "university",
+      "via": "user"
+    },
+    "majors": {
+      "collection": "major"
+    },
+    "teachingExperience": {
+      "type": "enumeration",
+      "enum": [
+        "below5years",
+        "below10years",
+        "below20years",
+        "morethan20years"
+      ],
+      "required": false
+    },
+    "enrolledStudent": {
+      "type": "enumeration",
+      "enum": [
+        "lessthan20",
+        "lessthan100",
+        "lessthan200",
+        "morethan200"
+      ]
+    },
+    "classroom": {
+      "type": "string"
+    },
+    "CurrentAcademicPerformance": {
+      "type": "enumeration",
+      "enum": [
+        "Excellent",
+        "Good",
+        "Average",
+        "BelowAverage"
+      ]
+    },
+    "DesiredAcademicPerformance": {
+      "type": "enumeration",
+      "enum": [
+        "Excellent",
+        "Good",
+        "Average",
+        "BelowAverage"
+      ]
+    },
+    "examType": {
+      "type": "enumeration",
+      "enum": [
+        "Analytical",
+        "Memorization"
+      ]
+    },
+    "questionType": {
+      "type": "enumeration",
+      "enum": [
+        "MultipleChoice",
+        "FreeResponse"
+      ]
+    },
+    "procrastinationLevel": {
+      "type": "enumeration",
+      "enum": [
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "learningType": {
+      "collection": "learning-type"
     }
   }
 }

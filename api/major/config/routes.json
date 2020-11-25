@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/tokens",
-      "handler": "token.find",
+      "path": "/majors",
+      "handler": "major.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/tokens/count",
-      "handler": "token.count",
+      "path": "/majors/count",
+      "handler": "major.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/tokens/:id",
-      "handler": "token.findOne",
+      "path": "/majors/:id",
+      "handler": "major.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/tokens",
-      "handler": "token.create",
+      "path": "/majors",
+      "handler": "major.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/tokens/:id",
-      "handler": "token.update",
+      "path": "/majors/:id",
+      "handler": "major.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/tokens/:id",
-      "handler": "token.delete",
+      "path": "/majors/:id",
+      "handler": "major.delete",
       "config": {
         "policies": []
       }

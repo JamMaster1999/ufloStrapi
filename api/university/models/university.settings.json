@@ -1,24 +1,22 @@
 {
   "kind": "collectionType",
-  "collectionName": "q_performances",
+  "collectionName": "universities",
   "info": {
-    "name": "QPerformance"
+    "name": "university"
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": true
   },
   "attributes": {
-    "QuestionName": {
+    "name": {
       "type": "string"
     },
     "user": {
-      "via": "question_answers",
+      "via": "university",
       "plugin": "users-permissions",
       "model": "user"
-    },
-    "frame": {
-      "model": "frames"
     }
   }
 }

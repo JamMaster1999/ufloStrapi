@@ -19,9 +19,9 @@
       "type": "date"
     },
     "users": {
+      "via": "courses",
       "plugin": "users-permissions",
       "collection": "user",
-      "via": "courses",
       "dominant": true
     },
     "courseSlug": {
